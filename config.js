@@ -12,7 +12,7 @@ passport.use(
             clientID: process.env.GOOGLE_CLIENT_ID, // Google client ID from environment variable
             clientSecret: process.env.GOOGLE_CLIENT_SECRET, // Google client secret from environment variable
             // callbackURL: "http://localhost:3000/api/auth/google/callback", // Callback URL after Google authentication
-            callbackURL: "http://localhost:3000/api/auth/google/callback", // Callback URL after Google authentication
+            callbackURL: process.env.CALLBACK_URL, // Callback URL after Google authentication
         },
         async (accessToken, refreshToken, profile, cb) => {
             try {
